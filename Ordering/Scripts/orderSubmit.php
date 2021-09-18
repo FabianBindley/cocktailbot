@@ -21,10 +21,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   //take the access code from the Post
   $drinkID = $_POST['drinkID'];
   $deviceAccessCode = $_SESSION['deviceAccessCode'];
-  if(addOrder($drinkID,$deviceAccessCode,time(),$pdo))
+  $latestOrder = addOrder($drinkID,$deviceAccessCode,time(),$pdo);
+  if($latestOrder['id'] > 0)
   {
     //Order successfully made
-    header("Location: orderSuccess");
+    header("Location: /cocktailbot/Ordering/Design/orderSuccess.php?drink=".$latestOrder['id']);
   }
   else {
     header("Location: orderFailed");
@@ -39,8 +40,13 @@ function addOrder($_drinkID,$_deviceAccessCode,$_epochTime,$_pdo){
   // inserts the email, password, first and last names and since the account has just been created, it is active so set to 0.
   //the level of access by default is also set to 1
   $query->execute(["drinkID"=>$_drinkID, "deviceAccessCode"=>$_deviceAccessCode, "epochTime"=>$_epochTime]);
-  return True;
+
+  $query = $_pdo->prepare("SELECT id FROM Orders ORDER BY id DESC LIMIT 1");
+  $query->execute();
+  return $query->fetch();
 }
+
+
 
 
 

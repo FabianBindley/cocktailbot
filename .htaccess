@@ -25,8 +25,14 @@ RewriteRule ^orderPage/?$ /cocktailbot/Ordering/Design/orderPage.php
 #orderConfirmation
 RewriteRule ^orderConfirmation/?$ /cocktailbot/Ordering/Design/orderConfirmation.php
 
-#orderSubmission
+#orderConfirmation
 RewriteRule ^orderConfirm/?$ /cocktailbot/Ordering/Design/orderConfirmation.php
 
 #orderSubmission
 RewriteRule ^orderSubmit/?$ /cocktailbot/Ordering/Scripts/orderSubmit.php
+
+#orderSuccess
+RewriteRule ^orderSuccess/?$ /cocktailbot/Ordering/Design/orderSuccess.php
+
+#orderfailed
+RewriteRule ^orderFailed/?$ /cocktailbot/Ordering/Design/orderFailed.php

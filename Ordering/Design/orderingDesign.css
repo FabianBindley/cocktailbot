@@ -5,7 +5,9 @@
   padding: 10px;
 }
 
-
+.largePadding{
+  padding: 15vh;
+}
 .padding{
   padding: 10vh;
 }

@@ -17,7 +17,7 @@
 
   <h1>Welcome to CocktailBot, How can I help you?</h1>
   <ul>
-    <li><a href="orderLogin">Order Drink </a></li>
+    <li><a href="orderPage">Order Drink </a></li>
     <li><a href="adminLogin">Access the admin panel </a></li>
 
 
