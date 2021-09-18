@@ -1,0 +1,32 @@
+IndexIgnore *
+Options -Indexes
+
+RewriteEngine on
+
+#Database connection
+RewriteRule ^databaseConnection/?$ /cocktailbot/Functions/databaseConnection.php
+
+
+#Admin Login
+RewriteRule ^adminLogin/?$ /cocktailbot/Administration/Design/adminLoginDesign.php
+
+#Order Login
+RewriteRule ^orderLogin/?$ /cocktailbot/Ordering/Design/orderLoginDesign.php
+
+#Order Login script
+RewriteRule ^orderLoginScript/?$ /cocktailbot/Ordering/Scripts/script.orderLogin.php
+
+#Ordering css
+RewriteRule ^orderCSS/?$ /cocktailbot/Ordering/Design/orderingDesign.css
+
+#Order page
+RewriteRule ^orderPage/?$ /cocktailbot/Ordering/Design/orderPage.php
+
+#orderConfirmation
+RewriteRule ^orderConfirmation/?$ /cocktailbot/Ordering/Design/orderConfirmation.php
+
+#orderSubmission
+RewriteRule ^orderConfirm/?$ /cocktailbot/Ordering/Design/orderConfirmation.php
+
+#orderSubmission
+RewriteRule ^orderSubmit/?$ /cocktailbot/Ordering/Scripts/orderSubmit.php

@@ -1,0 +1,68 @@
+.center {
+  margin: auto;
+  width: 30%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+
+
+.padding{
+  padding: 10vh;
+}
+.smallPadding{
+  padding: 0.5vh;
+}
+.orderLoginError{
+  color: red;
+  margin: auto;
+  border: 2px solid red;
+  padding: 10px;
+  align-items: center;
+}
+.centeredContainer{
+  margin: auto;
+  text-align: center;
+
+}
+.buttonContainer{
+  width: 20%;
+  margin: auto;
+  text-align: center;
+
+}
+.orderTitle{
+  color: blue;
+  font-size: 5vh;
+}
+.orderInformation{
+  color: black;
+  font-size: 2vh;
+}
+.cardContainer{
+  width: 65%;
+  margin: auto;
+  padding: 10px;
+}
+
+.cardConfirmationContainer{
+  width: 25%;
+  margin: auto;
+  padding: 10px;
+}
+.card-img{
+  width: 50%;
+}
+
+@media screen and (max-width: 400px) {
+  .cardConfirmationContainer{
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+  }
+  .buttonContainer{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+
+  }
+}
